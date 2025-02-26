@@ -10,7 +10,7 @@ const client = new sdk.Client();
 client
 .setEndpoint(ENDPOINT!)
 .setProject(PROJECT_ID!)
-.setKey(API_KEY!)
+.setKey(API_KEY!);
 
 export const databases = new sdk.Databases(client);
 export const storage = new sdk.Storage(client);

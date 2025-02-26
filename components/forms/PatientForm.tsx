@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
@@ -35,19 +35,19 @@ const PatientForm = () => {
     },
   })
 
-  // 2. Define a submit handler.
-  async function onSubmit({name, email, phone}: z.infer<typeof UserFormValidation>) {
+  async function onSubmit({ name, email, phone }: z.infer<typeof UserFormValidation>) {
     setIsLoading(true);
+    try {
+        const userData = { name, email, phone };
+        console.log("user passed");
+        
+        const user = await createUser(userData);
+        if (user) router.push(`/patients/${user.$id}/register`)
+      } catch (error) {
+        console.error(error);
+      } 
+}
 
-    try{
-      const userData={ name, email, phone, }
-      const user = await createUser(userData);
-
-      if(user) router.push(`/patients/${user.$id}/register`)
-    } catch (error){
-      console.log(error);
-    }
-  }
 
   return (
 <Form {...form}>
