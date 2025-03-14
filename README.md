@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Healthcare Platform
 
-## Getting Started
+A modern healthcare management platform built with Next.js, TypeScript, ShadCN UI, and Appwrite. This platform helps healthcare providers manage appointments, patient records, and doctors efficiently.
 
-First, run the development server:
+🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Patient Management: Add, edit, and track patient details.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Appointment Management: Assign doctors and manage schedules.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Appointments: Schedule, update, and cancel appointments.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Authentication: Secure login and access control using Appwrite.
 
-## Learn More
+Dashboard: Interactive dashboard with statistics.
 
-To learn more about Next.js, take a look at the following resources:
+Notifications: Get real-time updates for appointments including an sms message.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Responsive UI: Designed with Tailwind CSS and ShadCN components.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Send SMS on Appointment Confirmation: Patients receive SMS notifications to confirm their appointment details.
 
-## Deploy on Vercel
+🛠️ Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Frontend: Next.js, React, TypeScript, Tailwind CSS, ShadCN UI
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Backend: Appwrite (Database, Authentication, Storage), Twilio
+
+📦 Installation
+
+1. Clone the Repository
+
+git clone https://github.com/your-username/healthcare-platform.git
+cd healthcare-platform
+
+2. Install Dependencies
+
+npm install  # or yarn install
+
+3. Configure Environment Variables
+
+Create a .env.local file and add the following:
+
+#APPWRITE
+NEXT_PUBLIC_ENDPOINT=https://cloud.appwrite.io/v1
+PROJECT_ID=
+API_KEY=
+DATABASE_ID=
+PATIENT_COLLECTION_ID=
+APPOINTMENT_COLLECTION_ID=
+NEXT_PUBLIC_BUCKET_ID=
+
+NEXT_PUBLIC_ADMIN_PASSKEY=
+
+Enter your real Appwrite credentials in place of the placeholder data. By creating an account on the Appwrite website, you can get these credentials.
+4. Run the Development Server
+
+npm run dev  # or yarn dev
+
+The app should now be running at http://localhost:3000
