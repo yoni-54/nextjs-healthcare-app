@@ -44,10 +44,15 @@ Create a .env.local file and add the following:
 #APPWRITE
 NEXT_PUBLIC_ENDPOINT=https://cloud.appwrite.io/v1
 PROJECT_ID= placeholder
+
 API_KEY= placeholder
+
 DATABASE_ID= placeholder
+
 PATIENT_COLLECTION_ID= plaveholder
+
 APPOINTMENT_COLLECTION_ID= placeholder
+
 NEXT_PUBLIC_BUCKET_ID= placeholder
 
 NEXT_PUBLIC_ADMIN_PASSKEY=
